@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+while true; do
+	# First, determine our rate by deterining how long we should sleep
+	sleep_time="$(snapctl get sleep-time)"
+
+	# Now be nice and greet
+	echo "Hello, World!"
+
+	# Now sleep for the time specified in the config file
+	sleep "$sleep_time"
+done
